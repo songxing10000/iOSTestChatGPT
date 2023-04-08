@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Reusable
 class SXTableViewImpl<Cell: UITableViewCell & SXTableCellProtocol, ViewModel>: UIViewController, UITableViewDataSource, UITableViewDelegate, SXTableViewProtocol where Cell.Model == ViewModel {
     
     var tableView: UITableView!
@@ -19,25 +20,30 @@ class SXTableViewImpl<Cell: UITableViewCell & SXTableCellProtocol, ViewModel>: U
         tableView = UITableView(frame: view.frame, style: .plain)
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.register(Cell.self, forCellReuseIdentifier: Cell.cellId)
+        tableView.register(cellType: Cell.self)
+    
         view.addSubview(tableView)
         tableView.frame = UIScreen.main.bounds
-    }
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Cell.cellId, for: indexPath) as! Cell
-        cell.configCell(data: data[indexPath.row])
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     func reloadData() {
         tableView.reloadData()
     }
+    
+    // MARK: UITableViewDataSource
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return data.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(for: indexPath, cellType: Cell.self)
+        cell.configCell(data: data[indexPath.row])
+        return cell
+    }
+    // MARK: UITableViewDelegate
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    
 }

@@ -9,11 +9,11 @@ import UIKit
 
 class MyTableViewCell: UITableViewCell, SXTableCellProtocol {
     
-        func configCell(data: MyModel) {
-            textLabel?.text = data.title
-            detailTextLabel?.text = data.subtitle
-        }
-        static var cellId: String {
-            return "MyTableViewCell"
+    @IBOutlet weak var m_lab1: UILabel!
+    @IBOutlet weak var m_lab2: UILabel!
+
+    func configCell(data: MyModel) {
+        m_lab1.text = data.title
+        m_lab2.text = data.subtitle
         }
 }

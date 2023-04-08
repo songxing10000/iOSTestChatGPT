@@ -4,10 +4,9 @@
 //
 //  Created by mac on 2023/4/8.
 //
- 
-protocol SXTableCellProtocol {
+import Reusable
+protocol SXTableCellProtocol:NibReusable {
     associatedtype Model
     func configCell(data: Model)
-    static var cellId: String { get }
 }
 
