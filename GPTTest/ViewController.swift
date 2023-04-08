@@ -10,6 +10,6 @@ import UIKit
 class ViewController: UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        navigationController?.pushViewController(DemoListVC(style: .plain), animated: true)
+        navigationController?.pushViewController(DemoListVC(), animated: true)
     }
 }

@@ -10,17 +10,19 @@ class TableViewImpl<Cell: UITableViewCell & TableCellProtocol, ViewModel>: UIVie
     
     var tableView: UITableView!
     var data: [ViewModel] = []
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
-    convenience init(style: UITableView.Style = .plain) {
-        self.init(nibName: nil, bundle: nil)
-        tableView = UITableView(frame: view.frame, style: style)
+    init(style: UITableView.Style = .plain) {
+        super.init(nibName: nil, bundle: nil)
+        tableView = UITableView(frame: view.frame, style: .plain)
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(Cell.self, forCellReuseIdentifier: Cell.cellId)
         view.addSubview(tableView)
         tableView.frame = UIScreen.main.bounds
     }
-        
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count
     }
