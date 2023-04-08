@@ -6,7 +6,7 @@
 //
 
 import UIKit
-class TableViewImpl<Cell: UITableViewCell & TableCellProtocol, ViewModel>: UIViewController, UITableViewDataSource, UITableViewDelegate, TableViewProtocol where Cell.Model == ViewModel {
+class SXTableViewImpl<Cell: UITableViewCell & SXTableCellProtocol, ViewModel>: UIViewController, UITableViewDataSource, UITableViewDelegate, SXTableViewProtocol where Cell.Model == ViewModel {
     
     var tableView: UITableView!
     var data: [ViewModel] = []

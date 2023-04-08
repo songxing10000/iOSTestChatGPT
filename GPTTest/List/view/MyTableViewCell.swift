@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MyTableViewCell: UITableViewCell, TableCellProtocol {
+class MyTableViewCell: UITableViewCell, SXTableCellProtocol {
     
         func configCell(data: MyModel) {
             textLabel?.text = data.title

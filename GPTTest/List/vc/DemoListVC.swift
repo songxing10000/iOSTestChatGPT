@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DemoListVC: TableViewImpl<MyTableViewCell, MyModel>  {
+class DemoListVC: SXTableViewImpl<MyTableViewCell, MyModel>  {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -16,5 +16,6 @@ class DemoListVC: TableViewImpl<MyTableViewCell, MyModel>  {
             MyModel(title: "Title 2", subtitle: "Subtitle 2"),
             MyModel(title: "Title 3", subtitle: "Subtitle 3")
         ]
+        
     }
 }

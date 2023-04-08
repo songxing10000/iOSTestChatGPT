@@ -13,9 +13,9 @@
 		04E4DD6C29E10957003E55A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04E4DD6A29E10957003E55A7 /* Main.storyboard */; };
 		04E4DD6E29E10958003E55A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04E4DD6D29E10958003E55A7 /* Assets.xcassets */; };
 		04E4DD7129E10958003E55A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04E4DD6F29E10958003E55A7 /* LaunchScreen.storyboard */; };
-		04E4DD7929E1097F003E55A7 /* TableCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E4DD7829E1097F003E55A7 /* TableCellProtocol.swift */; };
-		04E4DD7B29E10996003E55A7 /* TableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E4DD7A29E10996003E55A7 /* TableViewProtocol.swift */; };
-		04E4DD7D29E109B9003E55A7 /* TableViewImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E4DD7C29E109B9003E55A7 /* TableViewImpl.swift */; };
+		04E4DD7929E1097F003E55A7 /* SXTableCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E4DD7829E1097F003E55A7 /* SXTableCellProtocol.swift */; };
+		04E4DD7B29E10996003E55A7 /* SXTableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E4DD7A29E10996003E55A7 /* SXTableViewProtocol.swift */; };
+		04E4DD7D29E109B9003E55A7 /* SXTableViewImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E4DD7C29E109B9003E55A7 /* SXTableViewImpl.swift */; };
 		04E4DD7F29E109DA003E55A7 /* MyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E4DD7E29E109DA003E55A7 /* MyModel.swift */; };
 		04E4DD8229E10AFF003E55A7 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E4DD8029E10AFF003E55A7 /* MyTableViewCell.swift */; };
 		04E4DD8329E10AFF003E55A7 /* MyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E4DD8129E10AFF003E55A7 /* MyTableViewCell.xib */; };
@@ -31,9 +31,9 @@
 		04E4DD6D29E10958003E55A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04E4DD7029E10958003E55A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04E4DD7229E10958003E55A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		04E4DD7829E1097F003E55A7 /* TableCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCellProtocol.swift; sourceTree = "<group>"; };
-		04E4DD7A29E10996003E55A7 /* TableViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewProtocol.swift; sourceTree = "<group>"; };
-		04E4DD7C29E109B9003E55A7 /* TableViewImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewImpl.swift; sourceTree = "<group>"; };
+		04E4DD7829E1097F003E55A7 /* SXTableCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SXTableCellProtocol.swift; sourceTree = "<group>"; };
+		04E4DD7A29E10996003E55A7 /* SXTableViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SXTableViewProtocol.swift; sourceTree = "<group>"; };
+		04E4DD7C29E109B9003E55A7 /* SXTableViewImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SXTableViewImpl.swift; sourceTree = "<group>"; };
 		04E4DD7E29E109DA003E55A7 /* MyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyModel.swift; sourceTree = "<group>"; };
 		04E4DD8029E10AFF003E55A7 /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 		04E4DD8129E10AFF003E55A7 /* MyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTableViewCell.xib; sourceTree = "<group>"; };
@@ -118,8 +118,8 @@
 		04E4DD8829E10D95003E55A7 /* protocol */ = {
 			isa = PBXGroup;
 			children = (
-				04E4DD7A29E10996003E55A7 /* TableViewProtocol.swift */,
-				04E4DD7829E1097F003E55A7 /* TableCellProtocol.swift */,
+				04E4DD7A29E10996003E55A7 /* SXTableViewProtocol.swift */,
+				04E4DD7829E1097F003E55A7 /* SXTableCellProtocol.swift */,
 			);
 			path = protocol;
 			sourceTree = "<group>";
@@ -127,7 +127,7 @@
 		04E4DD8929E10DB4003E55A7 /* imp */ = {
 			isa = PBXGroup;
 			children = (
-				04E4DD7C29E109B9003E55A7 /* TableViewImpl.swift */,
+				04E4DD7C29E109B9003E55A7 /* SXTableViewImpl.swift */,
 			);
 			path = imp;
 			sourceTree = "<group>";
@@ -216,14 +216,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04E4DD7929E1097F003E55A7 /* TableCellProtocol.swift in Sources */,
+				04E4DD7929E1097F003E55A7 /* SXTableCellProtocol.swift in Sources */,
 				04E4DD8229E10AFF003E55A7 /* MyTableViewCell.swift in Sources */,
 				04E4DD6929E10957003E55A7 /* ViewController.swift in Sources */,
 				04E4DD6529E10957003E55A7 /* AppDelegate.swift in Sources */,
-				04E4DD7D29E109B9003E55A7 /* TableViewImpl.swift in Sources */,
+				04E4DD7D29E109B9003E55A7 /* SXTableViewImpl.swift in Sources */,
 				04E4DD8B29E10DE4003E55A7 /* DemoListVC.swift in Sources */,
 				04E4DD7F29E109DA003E55A7 /* MyModel.swift in Sources */,
-				04E4DD7B29E10996003E55A7 /* TableViewProtocol.swift in Sources */,
+				04E4DD7B29E10996003E55A7 /* SXTableViewProtocol.swift in Sources */,
 				04E4DD6729E10957003E55A7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
