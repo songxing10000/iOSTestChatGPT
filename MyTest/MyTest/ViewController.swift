@@ -44,7 +44,7 @@ class ViewController: UIViewController {
         let customView = MyCustomView(frame: CGRect(x: 0, y: 0, width: 100, height: 50))
         customView.backgroundColor = .blue
         
-        let customAlertViewController = CustomAlertViewController(contentView: customView)//, contentWidth: 200, contentHeight: 100)
+        let customAlertViewController = CustomAlertViewController(contentView: customView, contentWidth: 300, contentHeight: 200)
         present(customAlertViewController, animated: true, completion: nil)
         
         

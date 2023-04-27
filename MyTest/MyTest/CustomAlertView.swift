@@ -6,7 +6,19 @@
 //
 
 import UIKit
-
+/*
+ class MyCustomView:UIView {
+     override var intrinsicContentSize: CGSize {
+         return CGSize(width: 200, height: 200)
+     }
+ }
+ 
+ 
+ let contentView = MyCustomView(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
+ contentView.backgroundColor = .white
+ let customSheetView = CustomAlertView(contentView: contentView, contentWidth: 300, contentHeight: 200)
+ customSheetView.show()
+ */
 class CustomAlertView: UIView {
    
    private var contentView: UIView?
@@ -78,16 +90,4 @@ class CustomAlertView: UIView {
    }
 }
 
-extension UIResponder {
-   static weak var _currentFirstResponder: UIResponder?
-   
-   static func currentFirstResponder() -> UIResponder? {
-       _currentFirstResponder = nil
-       UIApplication.shared.sendAction(#selector(findFirstResponder(sender:)), to: nil, from: nil, for: nil)
-       return _currentFirstResponder
-   }
-   
-   @objc func findFirstResponder(sender: AnyObject) {
-       UIResponder._currentFirstResponder = self
-   }
-}
+

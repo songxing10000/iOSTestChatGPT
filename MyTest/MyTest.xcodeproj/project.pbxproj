@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0445BCF529FA1B5B00502B9F /* CustomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0445BCF429FA1B5B00502B9F /* CustomSheetView.swift */; };
 		0445BCF729FA1BE200502B9F /* CustomAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0445BCF629FA1BE100502B9F /* CustomAlertView.swift */; };
+		0445BCF929FA264300502B9F /* UIResponderEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0445BCF829FA264300502B9F /* UIResponderEx.swift */; };
 		986710A529F02A5B0032EA25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986710A429F02A5B0032EA25 /* AppDelegate.swift */; };
 		986710A729F02A5B0032EA25 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986710A629F02A5B0032EA25 /* SceneDelegate.swift */; };
 		986710A929F02A5B0032EA25 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986710A829F02A5B0032EA25 /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		0445BCF429FA1B5B00502B9F /* CustomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSheetView.swift; sourceTree = "<group>"; };
 		0445BCF629FA1BE100502B9F /* CustomAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAlertView.swift; sourceTree = "<group>"; };
+		0445BCF829FA264300502B9F /* UIResponderEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIResponderEx.swift; sourceTree = "<group>"; };
 		986710A129F02A5B0032EA25 /* MyTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		986710A429F02A5B0032EA25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		986710A629F02A5B0032EA25 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				986710A829F02A5B0032EA25 /* ViewController.swift */,
+				0445BCF829FA264300502B9F /* UIResponderEx.swift */,
 				0445BCF629FA1BE100502B9F /* CustomAlertView.swift */,
 				0445BCF429FA1B5B00502B9F /* CustomSheetView.swift */,
 				98C964C529F6D620008AC021 /* CustomSheetViewController.swift */,
@@ -150,6 +153,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0445BCF929FA264300502B9F /* UIResponderEx.swift in Sources */,
 				986710A929F02A5B0032EA25 /* ViewController.swift in Sources */,
 				0445BCF729FA1BE200502B9F /* CustomAlertView.swift in Sources */,
 				98C964C629F6D620008AC021 /* CustomSheetViewController.swift in Sources */,

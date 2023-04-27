@@ -7,7 +7,19 @@
 
 import UIKit
      
-
+/*
+ class MyCustomView:UIView {
+     override var intrinsicContentSize: CGSize {
+         return CGSize(width: 200, height: 200)
+     }
+ }
+ 
+ let customView = MyCustomView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 100))
+ customView.backgroundColor = .blue
+ 
+ let customAlertViewController = CustomSheetViewController(contentView: customView, contentWidth: 200, contentHeight: 300)
+ present(customAlertViewController, animated: true, completion: nil)
+ */
 class CustomSheetViewController: UIViewController {
     
     private var contentView: UIView?

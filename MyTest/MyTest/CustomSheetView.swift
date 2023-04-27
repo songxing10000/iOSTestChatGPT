@@ -6,7 +6,18 @@
 //
 
 import UIKit
-
+/*
+ class MyCustomView:UIView {
+     override var intrinsicContentSize: CGSize {
+         return CGSize(width: 200, height: 200)
+     }
+ }
+ 
+ let contentView = MyCustomView(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
+ contentView.backgroundColor = .white
+ let customSheetView = CustomSheetView(contentView: contentView, contentWidth: 300, contentHeight: 200)
+ customSheetView.show()
+ */
 class CustomSheetView: UIView {
    
    private var contentView: UIView?

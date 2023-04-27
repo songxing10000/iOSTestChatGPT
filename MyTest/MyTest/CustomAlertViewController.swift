@@ -6,7 +6,20 @@
 //
 
 import UIKit
-
+/*
+ 
+ class MyCustomView:UIView {
+ override var intrinsicContentSize: CGSize {
+ return CGSize(width: 200, height: 200)
+ }
+ }
+ 
+ let customView = MyCustomView(frame: CGRect(x: 0, y: 0, width: 100, height: 50))
+ customView.backgroundColor = .blue
+ 
+ let customAlertViewController = CustomAlertViewController(contentView: customView)//, contentWidth: 200, contentHeight: 100)
+ present(customAlertViewController, animated: true, completion: nil)
+ */
 
 class CustomAlertViewController: UIViewController {
     
@@ -54,19 +67,23 @@ class CustomAlertViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         contentView?.transform = CGAffineTransform(scaleX: 0.01, y: 0.01)
-        UIView.animate(withDuration: 0.3, animations: {
+        
+    
+        let animator = UIViewPropertyAnimator(duration: 0.3, dampingRatio: 0.6) {
             self.contentView?.transform = .identity
-        }) { _ in
-             
+            self.view.backgroundColor = UIColor.black.withAlphaComponent(0.5)
         }
-    } 
+        animator.startAnimation()
+    }
     func dismissWithAnimation() {
-        UIView.animate(withDuration: 0.3, animations: {
-            self.contentView?.transform = CGAffineTransform(scaleX: 0.01, y: 0.01)
+        let animator = UIViewPropertyAnimator(duration: 0.3, dampingRatio: 0.6) {
+            self.contentView?.transform = CGAffineTransform(scaleX: 0, y: 0)
             self.view.backgroundColor = UIColor.black.withAlphaComponent(0)
-        }) { _ in
+        }
+        animator.addCompletion { _ in
             self.dismiss(animated: false, completion: nil)
         }
+        animator.startAnimation()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
